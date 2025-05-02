@@ -1,0 +1,33 @@
+﻿div.section_oly-aml-near h3.title_section, div.section_oly-aml-far h3.title_section, div.section_oly-aml-center h3.title_section
+{
+	font-size:225%; /* Modify the font size of the title element to accomodate design */
+	font-weight:bold; /* Modify the weight of the title element to accomodate design */
+	margin-left:0px; /* remove the margin on this element as it is now set in the div itself */
+}
+
+
+div.section_oly-aml h4.subTitle
+{
+	font-size:146%; /* Modify the font size of the subtitle element to accomodate design */
+	font-weight:bold; /* Modify the weight of the subtitle element to accomodate design */
+	margin-left:0px; /* remove the margin on this element as it is now set in the div itself */
+}
+
+div.section_oly-aml-light a.navigationLink, div.section_oly-aml-light h4.subTitle
+{
+	color:white; /* change color of links for the Light version to White */
+}
+﻿
+
+/*
+﻿playback timings (ms):
+﻿  ﻿captures_list﻿: ﻿0.827﻿
+﻿  ﻿exclusion.robots﻿: ﻿0.029﻿
+﻿  ﻿exclusion.robots.policy﻿: ﻿0.013﻿
+﻿  ﻿esindex﻿: ﻿0.016﻿
+﻿  ﻿cdx.remote﻿: ﻿5.416﻿
+﻿  ﻿LoadShardBlock﻿: ﻿57.514﻿ (﻿3﻿)
+﻿  ﻿PetaboxLoader3.datanode﻿: ﻿93.208﻿ (﻿5﻿)
+﻿  ﻿load_resource﻿: ﻿261.77﻿ (﻿2﻿)
+﻿  ﻿PetaboxLoader3.resolve﻿: ﻿161.223﻿ (﻿2﻿)
+﻿*/

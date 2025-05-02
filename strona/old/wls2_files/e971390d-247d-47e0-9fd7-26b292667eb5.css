@@ -1,0 +1,37 @@
+﻿/*	In merch content for EL, we are using <newTerm> to identify "small grey text" 
+	and headers within AOBIs must still be sized as headers */
+
+/* small grey text */	
+span.newTerm { font-size: 75%; color: #666666; line-height: 155%; }
+div.wolBody span.newTerm{ font-style: normal; }
+
+/* 2nd component div on the page, if it is an overlay and has a level 4 header */
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C02 .section_oly-aml h4.title_section { font-size: 146%; }
+
+/* 2nd component div on the page, special handling for phrases in titles for sniffing */
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C02 .section_oly-aml h4.title_section span.phrase { display: block; background-color: #a5d9ff; font-size: 60%; padding: 0px 5px; padding-bottom: 6px; line-height: normal; }
+
+/* 2nd component div on the page, special handling for download */
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C02 .section_oly-aml .button { float: left; }
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C02 .section_oly-aml div.section div.section div p.lastElement { clear: none; }
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C02 .section_oly-aml div.section p.lastElement { padding-top: 1px; clear: left; }
+/*
+     FILE ARCHIVED ON 04:21:44 Feb 28, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 10:23:41 Sep 28, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.47
+  exclusion.robots: 0.018
+  exclusion.robots.policy: 0.008
+  esindex: 0.008
+  cdx.remote: 85.172
+  LoadShardBlock: 47.475 (3)
+  PetaboxLoader3.datanode: 68.658 (4)
+  load_resource: 89.958
+  PetaboxLoader3.resolve: 31.786
+*/

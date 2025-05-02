@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Nas - ReliveFM</title>
+    <link rel="stylesheet" href="style.css">
+	    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <a href="index.html">Radio</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="onas.html" class="active">O Nas</a>
+    </div>
+
+    <div class="info-box">
+        <h1>O Nas</h1>
+        <p>Witamy na stronie ReliveFM! Jesteśmy pasjonatami muzyki, którzy codziennie dostarczają najlepsze brzmienia dla naszych słuchaczy.</p>
+        
+        <h2>Nasza Misja</h2>
+        <p>Naszym celem jest dostarczanie różnorodnej muzyki, od klasycznych hitów po najnowsze trendy, a także tworzenie społeczności skupionej wokół muzyki.</p>
+        
+        <h2>Nasz Zespół</h2>
+		<center>
+        <ul>
+            <p><strong>Sky</strong> - Pomysłodawca ReliveFM, Twórca strony WWW</p>
+            <p><strong>Matisio</strong> - Twórca playlist</p>
+        </ul>
+		</center>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 ReliveFM. Wszelkie prawa zastrzeżone.</p>
+        <button id="darkModeToggle">🌙 Tryb ciemny</button>
+    </footer>
+<br>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleButton = document.getElementById("darkModeToggle");
+            const body = document.body;
+
+            function applyDarkMode(enabled) {
+                body.classList.toggle("dark-mode", enabled);
+                localStorage.setItem("darkMode", enabled ? "enabled" : "disabled");
+                toggleButton.textContent = enabled ? "☀ Tryb jasny" : "🌙 Tryb ciemny";
+            }
+
+            // Sprawdzenie ustawień z localStorage
+            const darkModeEnabled = localStorage.getItem("darkMode") === "enabled";
+            applyDarkMode(darkModeEnabled);
+
+            // Obsługa kliknięcia w przycisk
+            toggleButton.addEventListener("click", () => {
+                applyDarkMode(!body.classList.contains("dark-mode"));
+            });
+        });
+    </script>
+</body>
+</html>

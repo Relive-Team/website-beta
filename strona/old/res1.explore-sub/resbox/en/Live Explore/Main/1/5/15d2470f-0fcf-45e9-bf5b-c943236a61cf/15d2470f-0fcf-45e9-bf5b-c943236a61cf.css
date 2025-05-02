@@ -1,0 +1,8 @@
+/* Update to help some languages figure out where their "boxes" are */
+div.wolBody h1.PageTitle { padding-bottom: 5px; }
+
+/* Update to get rid of the green headers, set to same denim as other headers */
+div.wolBody div.section h3.title_section
+{
+	color: #22436C !important;
+}

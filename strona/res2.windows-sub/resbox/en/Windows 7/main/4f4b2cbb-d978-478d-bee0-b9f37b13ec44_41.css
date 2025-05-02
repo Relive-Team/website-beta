@@ -1,0 +1,79 @@
+﻿/* hero */
+div.section_oly-aml h3.title_section
+{
+	font-size: 225%;
+	margin-left: 0px;
+}
+
+div.section_oly-aml h4.subTitle { font-size: 146%; }
+
+div.section_oly-aml-light a.navigationLink,
+div.section_oly-aml-light h4.subTitle
+{ color: #FFFFFF; }
+
+/* styles for social media icons */
+h1.title_article
+{
+	font-size: 240%;
+	color: #22436c;
+	font-weight: normal;
+	margin: 0px;
+	float: left;
+	width: 65%;
+}
+
+#S01 div.defaultTableBlock
+{
+	width: 35%;
+	margin: 0px;
+	float: right;
+}
+
+.table_social
+{
+	margin: 0px;
+	margin-top: 19px;
+	padding: 0px;
+	width: 100%;
+}
+
+.table_social td { text-align: right; }
+.table_social img { vertical-align: bottom }
+
+/* fix spacing between downlevel hero images */
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C02 td.grid,
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C03 td.grid,
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C06 td.grid
+{ padding: 0px; }
+
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C02 td.grid { padding-top: 45px; }
+
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C02 td.grid-mid,
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C02 td.grid-last,
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C03 td.grid-last,
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C06 td.grid-last
+{ padding-left: 45px; }
+
+/* tighten spacing between bulleted list items */
+div#bodyContentPane div.sectionBottom div.containerOneFourthFar ul.unordered li.listItem p.para { margin-bottom: 10px; }
+
+div#bodyContentPane div.sectionBottom div.containerOneFourthFar ul.unordered { margin-bottom: 20px; }
+
+/* tighten overall page spacing */
+div#bodyContentPane { margin-top: -40px; }
+div#bodyNavBar { position: static; }
+.sectionBottom { padding-top: 6px; } /* original: 40 - overidden to 20 in 15d2470f-0fcf-45e9-bf5b-c943236a61cf */
+table.section_section-grid-1col-near { margin-bottom: 18px; }﻿
+
+/*
+﻿playback timings (ms):
+﻿  ﻿captures_list﻿: ﻿0.548﻿
+﻿  ﻿exclusion.robots﻿: ﻿0.017﻿
+﻿  ﻿exclusion.robots.policy﻿: ﻿0.006﻿
+﻿  ﻿esindex﻿: ﻿0.012﻿
+﻿  ﻿cdx.remote﻿: ﻿18.836﻿
+﻿  ﻿LoadShardBlock﻿: ﻿70.861﻿ (﻿3﻿)
+﻿  ﻿PetaboxLoader3.datanode﻿: ﻿146.119﻿ (﻿5﻿)
+﻿  ﻿load_resource﻿: ﻿260.039﻿ (﻿2﻿)
+﻿  ﻿PetaboxLoader3.resolve﻿: ﻿115.55﻿ (﻿2﻿)
+﻿*/

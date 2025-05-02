@@ -1,0 +1,28 @@
+﻿/* Update to help some languages figure out where their "boxes" are */
+div.wolBody h1.PageTitle { padding-bottom: 5px; }
+
+/* Update to get rid of the green headers, set to same denim as other headers */
+div.wolBody div.section h3.title_section
+{
+	color: #22436C !important;
+}
+/*
+     FILE ARCHIVED ON 04:20:25 Feb 28, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 10:23:41 Sep 28, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.822
+  exclusion.robots: 0.033
+  exclusion.robots.policy: 0.02
+  esindex: 0.016
+  cdx.remote: 21.064
+  LoadShardBlock: 106.97 (3)
+  PetaboxLoader3.datanode: 61.88 (4)
+  load_resource: 214.365
+  PetaboxLoader3.resolve: 186.732
+*/

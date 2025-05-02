@@ -1,0 +1,18 @@
+/* This override creates the "minibanner" on how-to-use sections */
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C04 div.section_oly-aml h3.title_section 
+{ 
+	font-size: 146%; 
+	position: relative; 
+	left: 15%; 
+	margin-top: 10px;
+}
+
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C04 div.section_oly-aml h3.title_section 
+{ 
+	color:#22436c !important; 
+}
+
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C04 div.section_oly-aml-light h3.title_section 
+{ 
+	color:#FFFFFF !important; 
+}

@@ -1,0 +1,624 @@
+ body {
+            transition: background 0.3s, color 0.3s;
+
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .menu {
+            background-color: #333;
+            padding: 10px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        .menu a:hover {
+            background-color: #555;
+        }
+		
+	.menu .active {
+	     background-color: #28a745;
+	}
+   	.highlight {
+             background-color: #4CAF50;
+             color: white;
+             font-weight: bold;
+    	}
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .radio-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            width: 80%;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .radio-box img {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+
+        .radio-info {
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .radio-info h2 {
+            font-size: 18px;
+            margin: 0;
+            color: #333;
+        }
+
+        .play-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .play-button:hover {
+            background-color: #218838;
+        }
+
+        .schedule {
+            margin: 30px auto;
+            width: 80%;
+            max-width: 600px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+	.info-box {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .info-box h2 {
+            margin-bottom: 10px;
+        }
+        .info-box p {
+            margin: 0;
+        }
+
+.page {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.page.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .menu {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .radio-box {
+    background-color: #222;
+    border: 1px solid #444;
+}
+
+.dark-mode .schedule {
+    background-color: #181818;
+    border: 1px solid #333;
+}
+
+.dark-mode button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode table {
+    color: #ffffff;
+    background-color: #222;
+}
+
+.dark-mode th, .dark-mode td {
+    border-color: #444;
+}
+
+.dark-mode button {
+    background-color: #333;
+    color: #fff;
+}
+.dark-mode .radio-info h2 {
+    color: white !important;
+}
+.dark-mode .contact-section {
+    background: #222;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+.dark-mode .contact-form input::placeholder,
+.dark-mode .contact-form textarea::placeholder {
+    color: #bbb;
+}
+.dark-mode .info-box {
+    background: #222;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .info-box h1,
+.dark-mode .info-box h2 {
+    color: #f0f0f0;
+}
+.dark-mode {
+    background: #111;
+    color: #fff;
+}
+
+.dark-mode .info-box,
+.dark-mode .contact-section {
+    background: #222;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.dark-mode .footer button {
+    background: #444;
+    color: #fff;
+}
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px; /* Odstęp między etykietą a polem input */
+}
+
+	.contact-form {
+		text-align: center;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-form label {
+    align-self: flex-start;
+    padding-left: 10px; /* Opcjonalnie dla lepszego wyrównania */
+}
+.contact-form input, 
+			.contact-form textarea {
+			width: 100%;
+			max-width: 500px; /* Możesz dostosować szerokość */
+		}
+
+        .contact-section {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+        .contact-form .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .contact-form label {
+            font-weight: bold;
+        }
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form textarea {
+            resize: none;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            background: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+		#scheduleTable {
+    table-layout: fixed;
+    width: 100%;
+}
+#scheduleTable th, #scheduleTable td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* Wspólne style dla obu przycisków */
+#darkModeToggle {
+    padding: 10px 15px; /* Zachowaj poprzednią wielkość */
+    font-size: 16px;    /* Wielkość czcionki */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Przyciemniony przycisk Tryb ciemny */
+#darkModeToggle.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Przyciemniony przycisk Tryb jasny */
+#darkModeToggle.light-mode {
+    background-color: #fff;
+    color: #333;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+.menu {
+    background-color: #333;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+.menu .active {
+    background-color: #28a745;
+}
+
+.highlight {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.radio-box,
+.schedule,
+.info-box,
+.contact-section {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.radio-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.radio-box img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.radio-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.radio-info h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+.play-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.play-button:hover {
+    background-color: #218838;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.page {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.page.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .menu {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .radio-box,
+body.dark-mode .schedule,
+body.dark-mode .contact-section,
+body.dark-mode .info-box {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+body.dark-mode button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+body.dark-mode .radio-info h2,
+body.dark-mode .info-box h1,
+body.dark-mode .info-box h2 {
+    color: #f0f0f0;
+}
+
+body.dark-mode table {
+    color: #ffffff;
+    background-color: #222;
+}
+
+body.dark-mode th,
+body.dark-mode td {
+    border-color: #444;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder {
+    color: #bbb;
+}
+
+.contact-form {
+    text-align: center;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    align-self: flex-start;
+    padding-left: 10px;
+}
+
+.contact-section {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.contact-form .form-group {
+    text-align: left;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    background: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+#scheduleTable {
+    table-layout: fixed;
+    width: 100%;
+}
+
+#scheduleTable th, 
+#scheduleTable td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#darkModeToggle {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+#darkModeToggle.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+#darkModeToggle.light-mode {
+    background-color: #fff;
+    color: #333;
+}
+.radio-box {
+    display: flex;
+    align-items: center;
+}
+
+.play-button, .mute-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.volume-slider {
+    width: 100px;
+    margin-left: 10px;
+}
+
+.mute-button.active {
+    background-color: #ddd;
+}
+
+/* Ukrywanie paska głośności, gdy jest wyciszony */
+.mute-button.muted + .volume-slider {
+    display: none;
+}

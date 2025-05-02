@@ -1,0 +1,27 @@
+/* This override is specific to the styling of the Explore home page */
+
+/*Large title for the mini-banners on the right */
+div.wolBody div.section_oly-aml-far h4.title_section 
+{ 	
+    font-size: 120%; 	
+}
+
+/* Move the main hero text to the bottom */
+div.wolBody div.section_oly-aml-full p
+{     
+    position: relative;
+    top: 250px;
+}
+
+/* large hero text */
+div.wolBody div.section_oly-aml-full span.newTerm
+{ 
+    font-size: 145%;
+    margin-right:5px;
+}
+
+/* Align minibanners with main banner*/
+div#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C03 div.section_oly
+{
+    margin-bottom: -3px;
+}

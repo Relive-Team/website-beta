@@ -1,0 +1,49 @@
+﻿
+/*changes width of side bar*/
+div#bodyContentPane div.sectionBottom div.containerRelatedFar
+{
+	 width: 198px; 
+}
+
+/*tightens up spacing under right side bulleted list*/
+div#bodyContentPane div.sectionBottom div.containerRelatedFar ul.unordered
+{
+	margin-bottom:10px;
+}
+
+/*tightens up spacing of right side bulleted list*/
+div#bodyContentPane div.sectionBottom div.containerRelatedFar ul.unordered li.listItem p.para
+{
+	margin-bottom:10px;
+}
+
+/*changes width of main content pane*/
+div#bodyContentPane div.sectionBottom div.containerReadingNear
+{
+	width: 628px;
+}
+
+/*tightens up general spacing*/
+div#bodyContentPane div.sectionBottom div.containerReadingNear div.topic_body_full div.defaultTableBlock table.section_section-grid-2col-near
+{
+	margin-bottom:0px;
+}
+
+/*adds underline to down-level hero links*/
+.section_oly-aml-light a.navigationLink
+{
+	text-decoration:underline;
+}﻿
+
+/*
+﻿playback timings (ms):
+﻿  ﻿captures_list﻿: ﻿10.962﻿
+﻿  ﻿exclusion.robots﻿: ﻿0.015﻿
+﻿  ﻿exclusion.robots.policy﻿: ﻿0.007﻿
+﻿  ﻿esindex﻿: ﻿0.008﻿
+﻿  ﻿cdx.remote﻿: ﻿15.415﻿
+﻿  ﻿LoadShardBlock﻿: ﻿87.53﻿ (﻿3﻿)
+﻿  ﻿PetaboxLoader3.datanode﻿: ﻿197.675﻿ (﻿5﻿)
+﻿  ﻿load_resource﻿: ﻿299.924﻿ (﻿2﻿)
+﻿  ﻿PetaboxLoader3.resolve﻿: ﻿173.358﻿ (﻿2﻿)
+﻿*/

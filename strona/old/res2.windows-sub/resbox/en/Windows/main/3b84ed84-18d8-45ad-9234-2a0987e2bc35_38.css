@@ -1,0 +1,25 @@
+﻿div.wolBody div.section_oly-aml h3.title_section,
+div.section_oly-aml h3.title_section { font-size:225%; }
+div.wolBody div.section_oly-aml h4.subTitle,
+div.section_oly-aml h4.subTitle { font-size:146%; }
+
+div.wolBody div.section_oly-aml h3.title_section .para,
+div.section_oly-aml h3.title_section .para { margin-left: 0px; }
+
+div.wolBody div.section_oly-aml-light a.navigationLink, 
+div.wolBody div.section_oly-aml-light h4.subTitle,
+div.section_oly-aml-light a.navigationLink, 
+div.section_oly-aml-light h4.subTitle { color: #FFFFFF; }﻿
+
+/*
+﻿playback timings (ms):
+﻿  ﻿captures_list﻿: ﻿0.504﻿
+﻿  ﻿exclusion.robots﻿: ﻿0.021﻿
+﻿  ﻿exclusion.robots.policy﻿: ﻿0.01﻿
+﻿  ﻿esindex﻿: ﻿0.011﻿
+﻿  ﻿cdx.remote﻿: ﻿8.421﻿
+﻿  ﻿LoadShardBlock﻿: ﻿112.856﻿ (﻿3﻿)
+﻿  ﻿PetaboxLoader3.datanode﻿: ﻿137.147﻿ (﻿5﻿)
+﻿  ﻿PetaboxLoader3.resolve﻿: ﻿194.122﻿ (﻿3﻿)
+﻿  ﻿load_resource﻿: ﻿237.591﻿ (﻿2﻿)
+﻿*/

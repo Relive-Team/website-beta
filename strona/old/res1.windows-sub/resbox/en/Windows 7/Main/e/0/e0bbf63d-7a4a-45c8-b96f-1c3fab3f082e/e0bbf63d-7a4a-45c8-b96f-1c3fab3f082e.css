@@ -1,0 +1,24 @@
+﻿/*Override for pages that have the page title in a regular container 
+rather than using the title control*/
+
+div.topic_body_full h1.title_article
+{
+	font-size:240%;
+	color: #22436C;
+	font-weight: normal;
+	margin-bottom: 24px;
+}
+﻿
+
+/*
+﻿playback timings (ms):
+﻿  ﻿captures_list﻿: ﻿0.537﻿
+﻿  ﻿exclusion.robots﻿: ﻿0.018﻿
+﻿  ﻿exclusion.robots.policy﻿: ﻿0.008﻿
+﻿  ﻿esindex﻿: ﻿0.009﻿
+﻿  ﻿cdx.remote﻿: ﻿42.204﻿
+﻿  ﻿LoadShardBlock﻿: ﻿74.29﻿ (﻿3﻿)
+﻿  ﻿PetaboxLoader3.datanode﻿: ﻿158.519﻿ (﻿4﻿)
+﻿  ﻿load_resource﻿: ﻿209.768﻿
+﻿  ﻿PetaboxLoader3.resolve﻿: ﻿112.056﻿
+﻿*/

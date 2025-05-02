@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReliveFM</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="scripts.js"></script>
+ <style>
+        .player-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #volumeSlider {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="index.html" id="radioLink">Radio</a>
+        <a href="kontakt.html" id="kontaktLink">Kontakt</a>
+        <a href="onas.html" id="onasLink">O Nas</a>
+    </div>
+
+    <div class="container">
+        <div class="radio-box">
+            <div class="radio-info">
+                <iframe src="https://6klabs.com/widget/spotify/9a159e76d5d1cc8838ff0ff8000ec0837b2d5f4b7a7bec8b37c8c3524938d724" 
+                    width="900" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media">
+                </iframe>
+                <br>
+                <center>
+        <center>
+                    <div class="player-controls">
+                        <button class="play-button" id="playButton">▶</button>
+                        <button class="play-button" id="muteButton">🔊</button>
+                     </div>
+
+    </div>
+</div>
+
+<audio id="radioPlayer">
+    <source src="http://reliveradio.ddns.net:8000/stream" type="audio/mpeg">
+    Twoja przeglądarka nie obsługuje elementu audio.
+</audio>
+
+
+     <div class="schedule">
+    <h2>Program stacji</h2>
+    <table id="scheduleTable">
+        <tr>
+            <th>Dzień</th>
+            <th>Audycja</th>
+        </tr>
+        <tr>
+            <td>Poniedziałek</td>
+            <td>The Best of Polski Rock</td>
+        </tr>
+        <tr>
+            <td>Wtorek</td>
+            <td>80's, 90's and 00's </td>
+        </tr>
+        <tr>
+            <td>Środa</td>
+            <td>Summer Hits</td>
+        </tr>
+        <tr>
+            <td>Czwartek</td>
+            <td>New Songs</td>
+        </tr>
+        <tr>
+            <td>Piątek</td>
+            <td>Weekend ime</td>
+        </tr>
+        <tr>
+            <td>Sobota</td>
+            <td>90's Party</td>
+        </tr>
+        <tr>
+            <td>Niedziela</td>
+            <td>Polish 00's</td>
+        </tr>
+    </table>
+</div>
+ <div class="info-box">
+        <h2>Pobierz link</h2>
+        <p>Jeśli wolisz słuchać naszego radia w niestandardowym odtwarzaczu, takim jak Winamp, VLC itp., możesz to zrobić, pobierając poniższy link do streamingu.</p>
+		<center><a href="stream.m3u">Pobierz</a></center>
+	</div>
+    <footer class="footer">
+        <p>&copy; 2025 ReliveFM. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+	<br>
+	    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleButton = document.getElementById("darkModeToggle");
+            const body = document.body;
+
+            function applyDarkMode(enabled) {
+                body.classList.toggle("dark-mode", enabled);
+                localStorage.setItem("darkMode", enabled ? "enabled" : "disabled");
+                toggleButton.textContent = enabled ? "☀ Tryb jasny" : "🌙 Tryb ciemny";
+            }
+
+            // Sprawdzenie ustawień z localStorage
+            const darkModeEnabled = localStorage.getItem("darkMode") === "enabled";
+            applyDarkMode(darkModeEnabled);
+
+            // Obsługa kliknięcia w przycisk
+            toggleButton.addEventListener("click", () => {
+                applyDarkMode(!body.classList.contains("dark-mode"));
+            });
+        });
+    </script>
+</body>
+</html>

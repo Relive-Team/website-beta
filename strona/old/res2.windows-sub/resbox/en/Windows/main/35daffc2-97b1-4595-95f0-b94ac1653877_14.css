@@ -1,0 +1,19 @@
+﻿div.section_oly a.navigationLink, 
+div.wolbody div.section_oly a.navigationLink,
+#ctl00_FormlessContentPlaceholder_ContentPlaceholder_C02 .section_oly span.newTerm a
+{
+  color:white;
+}﻿
+
+/*
+﻿playback timings (ms):
+﻿  ﻿captures_list﻿: ﻿0.546﻿
+﻿  ﻿exclusion.robots﻿: ﻿0.02﻿
+﻿  ﻿exclusion.robots.policy﻿: ﻿0.009﻿
+﻿  ﻿esindex﻿: ﻿0.029﻿
+﻿  ﻿cdx.remote﻿: ﻿5.286﻿
+﻿  ﻿LoadShardBlock﻿: ﻿210.877﻿ (﻿3﻿)
+﻿  ﻿PetaboxLoader3.datanode﻿: ﻿165.596﻿ (﻿5﻿)
+﻿  ﻿PetaboxLoader3.resolve﻿: ﻿172.33﻿ (﻿2﻿)
+﻿  ﻿load_resource﻿: ﻿173.85﻿ (﻿2﻿)
+﻿*/
