@@ -1,67 +1,238 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>The Relive Team - Wybierz System</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: "Open Sans", sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-image: url('background.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+	<meta charset="utf-8">
+	<title>Relive Debloat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			--bg: rgb(41, 40, 40);
+			--text: white;
+			--button-bg: rgb(13, 204, 13);
+			--button-secondary: rgb(0, 120, 255);
+			--header-bg: #2e2e2e;
+		}
+		.light-mode {
+			--bg: white;
+			--text: black;
+			--button-bg: green;
+			--button-secondary: blue;
+			--header-bg: #ddd;
+		}
 
-        .content {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 40px 60px;
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 36px;
-            color: #333;
-            margin-bottom: 40px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .system-container {
-            display: flex;
-            gap: 30px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .system-container a img {
-            width: 300px;
-            border-radius: 20px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .system-container a img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        }
-    </style>
+		html {
+			scroll-behavior: smooth;
+		}
+		body {
+			background-color: var(--bg);
+			color: var(--text);
+			font-family: "Work Sans", sans-serif;
+			margin: 0;
+			padding: 0;
+			transition: background 0.3s, color 0.3s;
+		}
+		.header {
+			background-color: var(--header-bg);
+			padding: 10px 20px;
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		.nav-links {
+			display: flex;
+			gap: 20px;
+			align-items: center;
+		}
+		.header a {
+			color: var(--text);
+			text-decoration: none;
+			font-weight: 500;
+		}
+		.warning {
+			background-color: red;
+			color: white;
+			text-align: center;
+			padding: 10px;
+			font-weight: bold;
+		}
+		.banner {
+			background-image: url('tlo.jpg');
+			background-size: cover;
+			background-position: center;
+			text-align: center;
+			padding: 100px 20px;
+		}
+		.banner p {
+			font-size: 60px;
+			margin: 0 0 30px 0;
+			text-shadow: 2px 2px 8px #000;
+		}
+		button {
+			border: none;
+			cursor: pointer;
+			font-size: 18px;
+			border-radius: 8px;
+			padding: 15px 25px;
+			margin: 10px;
+			color: white;
+		}
+		.button-pobierz {
+			background-color: var(--button-bg);
+		}
+		.button-oprojekcie {
+			background-color: var(--button-secondary);
+		}
+		section {
+			padding: 40px 20px;
+			max-width: 1000px;
+			margin: auto;
+		}
+		video {
+			width: 100%;
+			max-width: 820px;
+			margin-bottom: 40px;
+			border-radius: 10px;
+		}
+		h1, h2 {
+			color: var(--text);
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		.faq-item, .guide-item {
+			margin: 20px 0;
+			border-bottom: 1px solid #555;
+			cursor: pointer;
+		}
+		.faq-question, .guide-question {
+			font-weight: bold;
+			padding: 10px;
+		}
+		.faq-answer, .guide-answer {
+			display: none;
+			padding: 10px 20px;
+		}
+		.faq-item.active .faq-answer,
+		.guide-item.active .guide-answer {
+			display: block;
+		}
+		#mode-toggle {
+			background-color: gray;
+			color: white;
+			border-radius: 20px;
+			padding: 8px 16px;
+			cursor: pointer;
+			font-size: 14px;
+		}
+	</style>
 </head>
 <body>
-    <div class="content">
-        <h1>Wybierz system:</h1>
-        <div class="system-container">
-            <a href="10"><img src="windows10.png" alt="Windows 10"></a>
-            <a href="11"><img src="windows11.png" alt="Windows 11"></a>
-        </div>
-    </div>
+	<div class="header">
+		<div class="nav-links">
+			<a href="/">
+				<img src="/images/logo-relive.png" width="50" alt="Relive Logo">
+			</a>
+			<a href="#oprojekcie" class="scroll-link">Relive DeBloat</a>
+			<a href="https://github.com/Relive-Team/relivedebloat/releases">Pobierz</a>
+			<a href="#poradniki" class="scroll-link">Poradniki</a>
+			<a href="#faq" class="scroll-link">FAQ</a>
+			<a href="#credits" class="scroll-link">Credits</a>
+		</div>
+		<button id="mode-toggle">Tryb Jasny</button>
+	</div>
+
+	<div class="warning">
+		UWAGA! Zalecamy wyłączyć antywirusa przed instalacją programu – program modyfikuje ustawienia systemowe Windows.
+	</div>
+
+	<div class="banner">
+		<p>Relive DeBloat</p>
+		<a href="https://github.com/Relive-Team/relivedebloat/releases">
+			<button class="button-pobierz">Pobierz</button>
+		</a>
+		<a href="#oprojekcie" class="scroll-link">
+			<button class="button-oprojekcie">O projekcie</button>
+		</a>
+	</div>
+
+	<section id="oprojekcie">
+		<h1>O Relive DeBloat</h1>
+		<p>
+			Relive Debloat to narzędzie do usuwania zbędnych aplikacji i funkcji z Windows 10 i 11,
+			poprawiające wydajność systemu. Umożliwia wyłączanie telemetrii, usuwanie preinstalowanych programów
+			oraz personalizację systemu. Przyjazne dla laików – <b>2 kliknięcia i gotowe!</b>
+		</p>
+		<img src="przedipo.png" alt="Przed i po debloat">
+	</section>
+
+	<section id="poradniki">
+		<h1>Poradniki</h1>
+		<div class="guide-item">
+			<div class="guide-question">Jak wyłączyć antywirusa?</div>
+			<div class="guide-answer">
+				<video controls>
+					<source src="wylaczenie antywirus.mp4" type="video/mp4">
+					Twoja przeglądarka nie obsługuje wideo.
+				</video>
+			</div>
+		</div>
+	</section>
+
+	<section id="faq">
+		<h1>FAQ – Najczęstsze pytania</h1>
+		<div class="faq-item">
+			<div class="faq-question">Czy Relive Debloat działa na Windows 11?</div>
+			<div class="faq-answer">Tak, program wspiera zarówno Windows 10 jak i 11.</div>
+		</div>
+		<div class="faq-item">
+			<div class="faq-question">Czy muszę znać się na komputerach?</div>
+			<div class="faq-answer">Nie! Program jest prosty – wystarczą dwa kliknięcia.</div>
+		</div>
+		<div class="faq-item">
+			<div class="faq-question">Czy mogę cofnąć zmiany?</div>
+			<div class="faq-answer">Niektóre zmiany są trwałe. Przed użyciem warto zrobić punkt przywracania systemu.</div>
+		</div>
+	</section>
+
+	<section id="credits">
+		<h2>Credits</h2>
+		<p>Autor tapety: <a href="https://pl.freepik.com/darmowe-zdjecie/pole-pokryte-czerwonymi-makami-otoczone-gorami-w-sloncu_10074778.htm">Obraz autorstwa wirestock na Freepik</a></p>
+		<p>Chris Titus Tech za CCT WinUtil</p>
+		<p>ShadowWhisperer za Remove-MS-Edge</p>
+	</section>
+
+	<script>
+		// Tryb jasny/ciemny
+		document.getElementById('mode-toggle').addEventListener('click', () => {
+			document.body.classList.toggle('light-mode');
+			const mode = document.body.classList.contains('light-mode') ? 'Tryb Ciemny' : 'Tryb Jasny';
+			document.getElementById('mode-toggle').textContent = mode;
+		});
+
+		// Rozwijane FAQ i Poradniki
+		document.querySelectorAll('.faq-item, .guide-item').forEach(item => {
+			item.addEventListener('click', () => {
+				item.classList.toggle('active');
+			});
+		});
+
+		// Płynne przewijanie do sekcji z animacją
+		document.querySelectorAll('.scroll-link').forEach(link => {
+			link.addEventListener('click', function(e) {
+				e.preventDefault();
+				const targetId = this.getAttribute('href');
+				const targetEl = document.querySelector(targetId);
+				if (targetEl) {
+					targetEl.scrollIntoView({ behavior: 'smooth' });
+				}
+			});
+		});
+	</script>
 </body>
 </html>
